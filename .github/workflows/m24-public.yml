@@ -1,0 +1,11 @@
+name: M24 public repository exclusion
+on:
+  push:
+    branches: [live-m24-public-20261117]
+permissions:
+  contents: read
+jobs:
+  excluded:
+    runs-on: ciproxy
+    steps:
+      - run: echo M24_PUBLIC_SHOULD_NOT_RUN
